@@ -37,20 +37,20 @@ Start Content
       <div class="row g-4 g-md-3  align-items-center">
         <div class="col-md-auto order-md-last">
           <div class="bannerUserImg">
-            <img src="{{me.userprofile.avatar.url}}" alt="{{me.first_name|title}} {{me.last_name|title}} avatar">
+            <img src="{{user.userprofile.avatar.url}}" alt="{{user.first_name|title}} {{user.last_name|title}} avatar">
           </div>
         </div>
         <div class="col-md">
           <div class="bannerContent">
-            <h1 class="xlTitle pb-3">Hi, I’m {{me.first_name|title}}, <br> a {{me.userprofile.title}} </br></h1>
+            <h1 class="xlTitle pb-3"> {{user.first_name|title}}, <br>  {{user.userprofile.title}} </br></h1>
             <p>{{me.userprofile.bio}}</p>
             <div class="bannerBtnCol">
               <div class="row">
                 <div class="col-auto">
-                  <a download href="{{me.userprofile.cv.url}}" class="btn btnPrimary">Download Resume</a>
+                  <a download href="{{me.userprofile.cv.url}}" class="btn btnPrimary">Pokedex</a>
                 </div>
                 <div class="col-auto">
-                  <a href="{% url 'main:contact' %}" class="btn btnOutline">Contact</a>
+                  <a href="{% url 'main:contact' %}" class="btn btnOutline">Contribuye al Wiki</a>
                 </div>
               </div>
             </div>
@@ -67,7 +67,7 @@ Start Content
       <div class="row">
         <div class="col-md-auto">
           <div class="keySkillCol">
-            <h4 class="smTitle pb-3">Key Skills</h4>
+            <h4 class="smTitle pb-3"></h4>
             {% for sk in me.userprofile.skills.all %}
             {% if sk.is_key_skill %}
             <div class="keySkillCard">
@@ -83,7 +83,7 @@ Start Content
           </div>
         </div>
         <div class="col-md">
-          <h4 class="smTitle pb-3">Coding Skills</h4>
+          <h4 class="smTitle pb-3"></h4>
           <div class="progressCol">
             <div class="progressCard">
               {% for sk in me.userprofile.skills.all %}
@@ -117,7 +117,7 @@ Start Content
     <div class="container">
       <div class="row pb-3">
         <div class="col">
-          <h4 class="smText regular">Certificates</h4>
+          <h4 class="smText regular">Datos Esenciales</h4>
         </div>
 
       </div>
@@ -157,7 +157,7 @@ Start Content
       <div class="portfolioCol">
         <div class="row pb-3">
           <div class="col">
-            <h4 class="smText regular">Featured Work</h4>
+            <h4 class="smText regular">Datos Esenciales</h4>
           </div>
           <div class="col-auto">
             <a href="{% url 'main:portfolios' %}" class="simpleLink">View all</a>
@@ -188,7 +188,7 @@ Start Content
         
       </div>
       <div class="testimonialCol">
-        <h4 class="smText regular d-block">Testimonials</h4>
+        <h4 class="smText regular d-block">Cartas Destacadas</h4>
         <div class="testimonialSlider">
           <div class="swiper testimonialSwiper">
             <div class="swiper-wrapper">
@@ -231,7 +231,7 @@ Start Content
     <div class="container">
       <div class="row pb-3">
         <div class="col">
-          <h4 class="smText regular">Recent posts</h4>
+          <h4 class="smText regular">Últimas Publicaciones</h4>
         </div>
         <div class="col-auto">
           <a href="{% url 'main:blogs' %}" class="simpleLink">View all</a>
